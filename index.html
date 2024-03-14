@@ -1,90 +1,330 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<title>💣Synthesis Sound Effects from Vocal Imitations not Limited to the Linguistic Pronunciations💣</title>
+<style>
+body {
+font-family:"helvetica";
+color:#333333;
+line-height:25px;
+font-size:0.95em;
+}
+
+table , td, th {
+	border: 1px solid #595959;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 3px;
+	width: 30px;
+	height: 25px;
+}
+
+a {
+  color: blue;
+}
+
+.abst {
+width: 1025px
+}
+
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
+    <center>
+    <br>
+    <h1>💣Synthesis Sound Effects from Vocal Imitations💣<br>not Limited to the Linguistic Pronunciations</h1>
+    <br>
+    <!-- <p><b>Papers</b><br>
+        <a href="https://arxiv.org/abs/2210.09173">arXiv preprint</a>
+    </p> -->
+    <p>
+        <b>Author</b><br> 
+        <u>Riki Takizawa</u><sup>1</sup>, 
+        Shigeyuki Hirai<sup>2</sup><br>
+        <sup>1</sup>: Department of Frontier Informatics, Graduate School of Kyoto Sangyo University, Japan.<br>
+        <sup>2</sup>: Faculty of Information Science and Engineering ,Kyoto Sangyo University, Japan.
+    </p>
+    <hr>
+
+    <!-- <h2>Results</h2> -->
+    <!-- <p style="margin-bottom:0;">Result1</p> -->
+    <style>
+        .example{
+            background-image: linear-gradient(to right top, transparent calc(50% - 0.5px), #999 50%, #999 calc(50% + 0.5px), transparent calc(50% + 1px));
+        }
+    </style>
+    <div style="text-justify:inter-ideograph;overflow: hidden;overflow-x: scroll;">
+        <h3 style="margin-bottom:0;">Result1</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/1_inp.png" width="300"></img></td>
+                    <td><img src="./pics/1_out1.png"width="300"></img></td>
+                    <td><img src="./pics/1_out2.png"width="300"></img></td>
+                    <td><img src="./pics/1_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/1_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/1_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/1_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/1_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result2</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/2_inp.png" width="300"></img></td>
+                    <td><img src="./pics/2_out1.png"width="300"></img></td>
+                    <td><img src="./pics/2_out2.png"width="300"></img></td>
+                    <td><img src="./pics/2_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/2_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/2_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/2_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/2_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result3</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/3_inp.png" width="300"></img></td>
+                    <td><img src="./pics/3_out1.png"width="300"></img></td>
+                    <td><img src="./pics/3_out2.png"width="300"></img></td>
+                    <td><img src="./pics/3_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/3_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/3_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/3_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/3_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result4</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/4_inp.png" width="300"></img></td>
+                    <td><img src="./pics/4_out1.png"width="300"></img></td>
+                    <td><img src="./pics/4_out2.png"width="300"></img></td>
+                    <td><img src="./pics/4_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/4_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/4_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/4_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/4_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result5</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/5_inp.png" width="300"></img></td>
+                    <td><img src="./pics/5_out1.png"width="300"></img></td>
+                    <td><img src="./pics/5_out2.png"width="300"></img></td>
+                    <td><img src="./pics/5_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/5_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/5_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/5_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/5_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result6</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/6_inp.png" width="300"></img></td>
+                    <td><img src="./pics/6_out1.png"width="300"></img></td>
+                    <td><img src="./pics/6_out2.png"width="300"></img></td>
+                    <td><img src="./pics/6_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/6_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/6_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/6_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/6_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result7</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/7_inp.png" width="300"></img></td>
+                    <td><img src="./pics/7_out1.png"width="300"></img></td>
+                    <td><img src="./pics/7_out2.png"width="300"></img></td>
+                    <td><img src="./pics/7_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/7_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/7_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/7_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/7_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result8</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/8_inp.png" width="300"></img></td>
+                    <td><img src="./pics/8_out1.png"width="300"></img></td>
+                    <td><img src="./pics/8_out2.png"width="300"></img></td>
+                    <td><img src="./pics/8_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/8_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/8_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/8_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/8_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result9</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/9_inp.png" width="300"></img></td>
+                    <td><img src="./pics/9_out1.png"width="300"></img></td>
+                    <td><img src="./pics/9_out2.png"width="300"></img></td>
+                    <td><img src="./pics/9_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/9_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/9_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/9_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/9_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h3 style="margin-bottom:0;">Result10</h3>
+        <table style="margin-bottom: 10vh;">
+            <tbody>
+                <tr>
+                    <th class="example"></th>
+                    <th><center>Input</center></th>
+                    <th><center>Model<sup>80</sup><sub>80</sub></center></th>
+                    <th><center>Model<sup>80</sup><sub>256</sub></center></th>
+                    <th><center>Model<sup>256</sup><sub>512</sub></center></th>
+                </tr>
+                <tr>
+                    <th><center>Waveform and <br>Mel-spec</center></th>
+                    <td><img src="./pics/10_inp.png" width="300"></img></td>
+                    <td><img src="./pics/10_out1.png"width="300"></img></td>
+                    <td><img src="./pics/10_out2.png"width="300"></img></td>
+                    <td><img src="./pics/10_out3.png"width="300"></img></td>
+                </tr>
+                <tr>
+                    <th><center>Sound</center></th>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/10_src.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/10_out_80_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/10_out_80_256_4heads.wav"></audio></center></td>
+                    <td><center><audio controls="" preload="none"><source src="./wavs/10_out_256_512_4heads.wav"></audio></center></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-  </header>
-  <div class="top-wrapper">
-    <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
-      </div>
-    </div>
-  </div>
-  <div class="lesson-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
-      </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
-          </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
-          </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
-          </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
-        </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
-          </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-  <div class="message-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
-      </div>
-      <span class="btn message">さっそく開発する</span>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
-    </div>
-  </footer>
 </body>
 </html>
